@@ -5,10 +5,10 @@ export function Layout() {
   const location = useLocation();
 
   const navItems = [
-    { path: "/", label: "홈", icon: Home },
-    { path: "/budget", label: "가계부", icon: Wallet },
-    { path: "/calendar", label: "일정", icon: CalendarDays },
-    { path: "/family", label: "가족", icon: Users },
+    { path: "/", label: "??", icon: Home },
+    { path: "/budget", label: "媛怨꾨?", icon: Wallet },
+    { path: "/calendar", label: "?쇱젙", icon: CalendarDays },
+    { path: "/family", label: "媛議?", icon: Users },
   ];
 
   return (
@@ -20,7 +20,7 @@ export function Layout() {
               <p className="text-sm font-medium text-gray-500">All in One Life</p>
               <h1 className="mt-2 text-3xl font-semibold text-gray-900">Family Flow</h1>
               <p className="mt-3 text-sm leading-6 text-gray-500">
-                집, 일정, 가족 루틴을 한 화면에서 차분하게 관리해보세요.
+                吏? ?쇱젙, 媛議?猷⑦떞?????붾㈃?먯꽌 李⑤텇?섍쾶 愿由ы빐蹂댁꽭??
               </p>
             </div>
 
@@ -46,9 +46,9 @@ export function Layout() {
           </div>
 
           <div className="rounded-3xl bg-gradient-to-br from-[#FFB3D9] to-[#FFE4B3] p-5 text-white shadow-lg">
-            <p className="text-sm font-medium opacity-90">오늘의 집중 포인트</p>
+            <p className="text-sm font-medium opacity-90">?ㅻ뒛??吏묒쨷 ?ъ씤??</p>
             <p className="mt-2 text-lg font-semibold leading-7">
-              가장 중요한 일부터 하나씩 정리하면 하루가 훨씬 가벼워집니다.
+              媛??以묒슂???쇰????섎굹???뺣━?섎㈃ ?섎（媛 ?⑥뵮 媛踰쇱썙吏묐땲??
             </p>
           </div>
         </aside>

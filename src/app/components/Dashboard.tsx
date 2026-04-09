@@ -17,18 +17,18 @@ interface Schedule {
 
 export function Dashboard() {
   const [todos, setTodos] = useState<Todo[]>([
-    { id: "1", text: "아이 등교 준비물 챙기기", completed: false, priority: "high" },
-    { id: "2", text: "프로젝트 보고서 작성", completed: false, priority: "high" },
-    { id: "3", text: "장보기", completed: true, priority: "medium" },
-    { id: "4", text: "운동 가기", completed: false, priority: "low" },
+    { id: "1", text: "?꾩씠 ?깃탳 以鍮꾨Ъ 梨숆린湲?", completed: false, priority: "high" },
+    { id: "2", text: "?꾨줈?앺듃 蹂닿퀬???묒꽦", completed: false, priority: "high" },
+    { id: "3", text: "?λ낫湲?", completed: true, priority: "medium" },
+    { id: "4", text: "?대룞 媛湲?", completed: false, priority: "low" },
   ]);
 
   const schedules: Schedule[] = [
-    { id: "1", time: "09:00", title: "회의 - 팀 미팅", type: "personal" },
-    { id: "2", time: "12:00", title: "점심 약속", type: "personal" },
-    { id: "3", time: "15:00", title: "아이 학원 픽업", type: "child" },
-    { id: "4", time: "17:30", title: "저녁 준비", type: "personal" },
-    { id: "5", time: "19:00", title: "아이 숙제 확인", type: "child" },
+    { id: "1", time: "09:00", title: "?뚯쓽 - ? 誘명똿", type: "personal" },
+    { id: "2", time: "12:00", title: "?먯떖 ?쎌냽", type: "personal" },
+    { id: "3", time: "15:00", title: "?꾩씠 ?숈썝 ?쎌뾽", type: "child" },
+    { id: "4", time: "17:30", title: "???以鍮?", type: "personal" },
+    { id: "5", time: "19:00", title: "?꾩씠 ?숈젣 ?뺤씤", type: "child" },
   ];
 
   const topPriorities = todos.filter((todo) => !todo.completed && todo.priority === "high");
@@ -63,7 +63,7 @@ export function Dashboard() {
       <div className="pt-4 lg:pt-0">
         <p className="text-sm text-gray-500 lg:text-base">{formattedDate}</p>
         <h1 className="mt-2 flex items-center gap-2 text-[clamp(1.9rem,3vw,3.1rem)] leading-tight">
-          <span>오늘도 한 걸음씩 나아가고 있어요</span>
+          <span>?ㅻ뒛????嫄몄쓬???섏븘媛怨??덉뼱??</span>
           <Sparkles className="h-5 w-5 text-[#FFB3D9] lg:h-6 lg:w-6" />
         </h1>
       </div>
@@ -73,7 +73,7 @@ export function Dashboard() {
           <div className="rounded-3xl bg-gradient-to-br from-[#FFB3D9] to-[#FFE4B3] p-6 shadow-lg lg:p-8">
             <div className="mb-4 flex items-center gap-2">
               <Star className="h-5 w-5 fill-white text-white" />
-              <h2 className="text-white">오늘의 우선순위 3가지</h2>
+              <h2 className="text-white">?ㅻ뒛???곗꽑?쒖쐞 3媛吏</h2>
             </div>
             <div className="grid gap-3 lg:grid-cols-3">
               {topPriorities.slice(0, 3).map((todo) => (
@@ -94,7 +94,7 @@ export function Dashboard() {
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-md lg:p-8">
-            <h3 className="mb-5">오늘 일정</h3>
+            <h3 className="mb-5">?ㅻ뒛 ?쇱젙</h3>
             <div className="space-y-3">
               {schedules.map((schedule) => (
                 <div key={schedule.id} className="flex items-start gap-3 lg:gap-4">
@@ -112,7 +112,7 @@ export function Dashboard() {
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-md lg:p-8">
-            <h3 className="mb-4">할 일 리스트</h3>
+            <h3 className="mb-4">????由ъ뒪??</h3>
             <div className="grid gap-2 xl:grid-cols-2">
               {todos.map((todo) => (
                 <div
@@ -143,64 +143,64 @@ export function Dashboard() {
         <aside className="space-y-6">
           <div className="rounded-3xl bg-white p-6 shadow-md lg:p-8">
             <div className="mb-4 flex items-center justify-between">
-              <h3>이번 달 지출</h3>
+              <h3>?대쾲 ??吏異?</h3>
               <TrendingUp className="h-5 w-5 text-[#FFB3D9]" />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl bg-[#FAFAFA] p-4">
-                <p className="mb-1 text-xs text-gray-500">총 지출</p>
-                <p className="text-xl">2,450,000원</p>
+                <p className="mb-1 text-xs text-gray-500">珥?吏異?</p>
+                <p className="text-xl">2,450,000??</p>
               </div>
               <div className="rounded-2xl bg-[#FAFAFA] p-4">
-                <p className="mb-1 text-xs text-gray-500">오늘 지출</p>
-                <p className="text-xl">45,000원</p>
+                <p className="mb-1 text-xs text-gray-500">?ㅻ뒛 吏異?</p>
+                <p className="text-xl">45,000??</p>
               </div>
             </div>
             <div className="mt-4 rounded-2xl bg-gradient-to-r from-[#B3D9FF] to-[#FFB3D9] p-4">
-              <p className="mb-1 text-xs text-white/80">가장 큰 지출</p>
-              <p className="text-white">생활비 850,000원</p>
+              <p className="mb-1 text-xs text-white/80">媛????吏異?</p>
+              <p className="text-white">?앺솢鍮?850,000??</p>
             </div>
           </div>
 
           <div className="rounded-3xl bg-white p-6 shadow-md lg:p-8">
-            <h3 className="mb-4">가족 요청 사항</h3>
+            <h3 className="mb-4">媛議??붿껌 ?ы빆</h3>
             <div className="space-y-3">
               <div className="rounded-2xl bg-[#B3D9FF]/30 p-4">
-                <p className="mb-2">첫째 (지우)</p>
+                <p className="mb-2">泥レ㎏ (吏??</p>
                 <ul className="space-y-1 text-sm">
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#B3D9FF]" />
-                    <span>운동화 사주기</span>
+                    <span>?대룞???ъ＜湲?</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#B3D9FF]" />
-                    <span>주말 영화 보러 가기</span>
+                    <span>二쇰쭚 ?곹솕 蹂대윭 媛湲?</span>
                   </li>
                 </ul>
               </div>
               <div className="rounded-2xl bg-[#B3FFCC]/30 p-4">
-                <p className="mb-2">둘째 (민서)</p>
+                <p className="mb-2">?섏㎏ (誘쇱꽌)</p>
                 <ul className="space-y-1 text-sm">
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#B3FFCC]" />
-                    <span>미술 재료 준비</span>
+                    <span>誘몄닠 ?щ즺 以鍮?</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#B3FFCC]" />
-                    <span>친구 생일 선물</span>
+                    <span>移쒓뎄 ?앹씪 ?좊Ъ</span>
                   </li>
                 </ul>
               </div>
               <div className="rounded-2xl bg-[#FFB3D9]/20 p-4">
-                <p className="mb-2">엄마</p>
+                <p className="mb-2">?꾨쭏</p>
                 <ul className="space-y-1 text-sm">
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#FFB3D9]" />
-                    <span>요가 수업 등록</span>
+                    <span>?붽? ?섏뾽 ?깅줉</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Circle className="h-3 w-3 text-[#FFB3D9]" />
-                    <span>책 읽기</span>
+                    <span>梨??쎄린</span>
                   </li>
                 </ul>
               </div>
